@@ -27,7 +27,6 @@ console.log(arrayBici);
 
 var piuLeggera = arrayBici[0];
 
-
 arrayBici.forEach((item, i) => {
   if ( piuLeggera.peso > arrayBici[i].peso) {
     piuLeggera =  arrayBici[i];
