@@ -1,7 +1,7 @@
 // Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 // Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 
-const squadreInizCamp = [
+const squadre = [
   {
     'nome' : 'Milan',
     'puntiFatti' : 0,
@@ -32,10 +32,6 @@ const squadreInizCamp = [
     'falliSubiti' : 0
   }
 ];
-console.log(squadreInizCamp);
-
-const squadreFineCamp = [...squadreInizCamp];
-console.log(squadreFineCamp);
 
 // console.log(squadre);
 
@@ -48,16 +44,16 @@ let puntiFatti = () => Math.floor(Math.random() * Math.floor(100));
 // arrow function per falli subiti random
 let falliSubiti = () => Math.floor(Math.random() * Math.floor(50));
 
-for (var i = 0; i < squadreFineCamp.length; i++) {
+for (var i = 0; i < squadre.length; i++) {
 
-  squadreFineCamp[i].puntiFatti = puntiFatti();
-  squadreFineCamp[i].falliSubiti = falliSubiti();
+  squadre[i].puntiFatti = puntiFatti();
+  squadre[i].falliSubiti = falliSubiti();
 }
 
-// console.log(squadre);
+console.log(squadre);
 
 
-squadreFineCamp.sort(function(a,b) {
+squadre.sort(function(a,b) {
   return b.puntiFatti - a.puntiFatti;
 });
 // console.log("Classifica aggiornata:" , squadre);
