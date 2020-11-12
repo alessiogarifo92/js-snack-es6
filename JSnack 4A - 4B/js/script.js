@@ -33,7 +33,7 @@ const squadre = [
   }
 ];
 
-// console.log(squadre);
+console.log(squadre);
 
 // STE 2:
 // Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti
@@ -44,16 +44,19 @@ let puntiFatti = () => Math.floor(Math.random() * Math.floor(100));
 // arrow function per falli subiti random
 let falliSubiti = () => Math.floor(Math.random() * Math.floor(50));
 
-for (var i = 0; i < squadre.length; i++) {
+// creo nuovo array per inserire punti fatti squadre fine campionato e vedere chi ha vinto
+const squadreFineCamp = squadre.map(team => (
+  {
+    ...team ,
+    puntiFatti : puntiFatti()
+  })
+);
 
-  squadre[i].puntiFatti = puntiFatti();
-  squadre[i].falliSubiti = falliSubiti();
-}
-
-console.log(squadre);
-
-
-squadre.sort(function(a,b) {
+// uso sort per mostrare classifica squadra con piu punti (invertendo i due argomenti si otterrebbe punti a incrementare)
+squadreFineCamp.sort(function(a,b) {
   return b.puntiFatti - a.puntiFatti;
 });
-// console.log("Classifica aggiornata:" , squadre);
+
+let vincitore = squadreFineCamp[0].name;
+console.log(squadreFineCamp);
+console.log(vincitore + 'vincitrice del campionato Serie A 2020');
