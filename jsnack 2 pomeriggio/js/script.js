@@ -17,7 +17,8 @@ const arrayObj = [
 console.log(arrayObj);
 
 // copia array di partenza a cui aggiungere position
-const arrayObj2 = [...arrayObj];
+// const arrayObj2 = [...arrayObj];
+
 
 const randomLetter = (lettera) => {
   let result = '';
@@ -29,11 +30,22 @@ const randomLetter = (lettera) => {
   return result;
 }
 
+const arrayObj2 = arrayObj.map(element => {
+  return ({element.push(position : randomLetter(1))});
+});
+
+
+var position = randomLetter(1);
+// arrayObj2.forEach((item, i) => {
+//   item.push(position);
+// });
+
+
 
 // ciclo arrayObj2 e inserisco per ogni oggetto index, nuova proprietà position e lettera random ricavata da funzione
-for (var i = 0; i < arrayObj2.length; i++) {
-  var position = randomLetter(1);
-  arrayObj2[i].position = position;
-}
+// for (var i = 0; i < arrayObj2.length; i++) {
+//   var position = randomLetter(1);
+//   arrayObj2[i].position = position;
+// }
 
 console.log(arrayObj2);
