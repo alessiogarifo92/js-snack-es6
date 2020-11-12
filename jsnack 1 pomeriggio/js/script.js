@@ -14,10 +14,12 @@ console.log(numeroUno);
 var numeroDue = parseInt(prompt('Inserisci un numero tra 0 e 5'));
 console.log(numeroDue);
 
-// nuovo array con sole persone indicate da numero index inserito da utente
-var nuovoArray = [];
-
-// pushiamo in nuovo array la selezione index fatta da utente con numeroDue + 1 perche senno escluderebbe numero index selezionato
-nuovoArray.push(myArray.slice(numeroUno , numeroDue + 1));
+// usiamo filter di myArray per stabilire condizione che nel caso index myArray >= numero inserito in prompt e index myArray <= valore inserito secondo prompt, allora deve ritornare un nuovoArray con elementi con index compresi nelle condizioni indicate
+const nuovoArray =  myArray.filter((element, index) => {
+  if (index >= numeroUno && index <= numeroDue) {
+    console.log(element , index);
+    return element; //anche scrivendo index riporta comunque non il numero index ma i nomi dell' array
+  }
+});
 
 console.log(nuovoArray);
