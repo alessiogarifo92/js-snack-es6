@@ -19,20 +19,6 @@ console.log(arrayObj);
 // copia array di partenza a cui aggiungere position
 const arrayObj2 = [...arrayObj];
 
-// ciclo per copiare oggetti in nuovo array
-// for (var i = 0; i < arrayObj.length; i++) {
-//   //creo oggetto
-//   arrayObj2.push({});
-
-  // utilizzo for in per riportare stesse proprietà all'interno del nuovo array
-//   for (var key in arrayObj[i]) {
-//     arrayObj2[i][key] = arrayObj[i][key];
-//   }
-// }
-// ritorna copia arrayObj ma poi modifiche incidono su entrambi array...
-// var arrayObj2 = arrayObj.slice();
-// console.log(arrayObj2);
-
 const randomLetter = (lettera) => {
   let result = '';
   const lettere = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -51,16 +37,3 @@ for (var i = 0; i < arrayObj2.length; i++) {
 }
 
 console.log(arrayObj2);
-
-// FUNZIONE per ottenere lettera random da inserire in position
-// function randomLetter(lettera) {
-//    var result = '';
-//    var lettere = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//    var lettereLength = lettere.length;
-//    for ( var i = 0; i < 1; i++ ) {
-//       result = lettere.charAt(Math.floor(Math.random() * lettereLength));
-//    }
-//    return result;
-// }
-
-// console.log(randomLetter(1));

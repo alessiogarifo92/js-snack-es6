@@ -33,18 +33,3 @@ arrayBici.forEach((item, i) => {
   }
 });
 console.log(piuLeggera);
-
-
-// creiamo ciclo array
-// for (var i = 0; i < arrayBici.length; i++) {
-  // se piuLeggera a cui abbiamo dato posizione 0, avra un peso maggiore di quella successiva nel ciclo, allora quella con peso minore dell array andra a sostituire attuale piuLeggera e cosi fino alla fine del ciclo e ci rilascerà quindi la bicicletta con peso minore
-//   if (piuLeggera.peso > arrayBici[i].peso) {
-//     piuLeggera = arrayBici[i];
-//   }
-// };
-
-// console.log(piuLeggera);
-
-// con questo si trova solo peso minore
-// var min = Math.min.apply(null, arrayBici.map(function(a){return a.peso;}));
-// console.log(min);

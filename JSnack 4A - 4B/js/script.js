@@ -57,17 +57,3 @@ squadre.sort(function(a,b) {
   return b.puntiFatti - a.puntiFatti;
 });
 // console.log("Classifica aggiornata:" , squadre);
-
-
-
-
-// FUNZIONI PER NUMERI RANDOM
-// function puntiFatti(max){
-//   return Math.floor(Math.random() * Math.floor(max));
-// };
-// console.log(puntiFatti(100));
-
-// function falliSubiti(max){
-//   return Math.floor(Math.random() * Math.floor(max));
-// };
-// console.log(falliSubiti(50));
