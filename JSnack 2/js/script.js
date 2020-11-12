@@ -1,6 +1,6 @@
 // Creare un array di oggetti: ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. Stampare a schermo la bici con peso minore.
 
-var arrayBici = [
+const arrayBici = [
   {
     'nome' : 'cross',
     'peso' : 35
