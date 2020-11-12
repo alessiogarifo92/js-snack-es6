@@ -16,9 +16,7 @@ const arrayObj = [
 ];
 console.log(arrayObj);
 
-// copia array di partenza a cui aggiungere position
-// const arrayObj2 = [...arrayObj];
-
+// creiao costante che ci dia ogni volta una lettera random
 
 const randomLetter = (lettera) => {
   let result = '';
@@ -30,22 +28,12 @@ const randomLetter = (lettera) => {
   return result;
 }
 
-const arrayObj2 = arrayObj.map(element => {
-  return ({element.push(position : randomLetter(1))});
-});
-
-
-var position = randomLetter(1);
-// arrayObj2.forEach((item, i) => {
-//   item.push(position);
-// });
-
-
-
-// ciclo arrayObj2 e inserisco per ogni oggetto index, nuova proprietà position e lettera random ricavata da funzione
-// for (var i = 0; i < arrayObj2.length; i++) {
-//   var position = randomLetter(1);
-//   arrayObj2[i].position = position;
-// }
+// copia array di partenza a cui aggiungere position
+const arrayObj2 = arrayObj.map(element => (
+  { //dobbiamo inserire i puntini davanti all' elemento e dentro la graffa, per andare a prendere le proprietà dentro element, senza puntini avrebbe preso l intera linea dell array e non avremmo potuto modificarne le proprietà
+    ...element ,
+    position : randomLetter(1)
+  })
+);
 
 console.log(arrayObj2);
