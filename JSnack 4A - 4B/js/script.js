@@ -57,6 +57,6 @@ squadreFineCamp.sort(function(a,b) {
   return b.puntiFatti - a.puntiFatti;
 });
 
-let vincitore = squadreFineCamp[0].name;
+let vincitore = squadreFineCamp[0].nome;
 console.log(squadreFineCamp);
-console.log(vincitore + 'vincitrice del campionato Serie A 2020');
+console.log(vincitore + ' è la squadra vincitrice del campionato Serie A 2020');
