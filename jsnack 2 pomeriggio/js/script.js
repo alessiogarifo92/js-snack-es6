@@ -16,23 +16,14 @@ const arrayObj = [
 ];
 console.log(arrayObj);
 
-// creiao costante che ci dia ogni volta una lettera random
-
-const randomLetter = (lettera) => {
-  let result = '';
-  const lettere = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const lettereLength = lettere.length;
-  for ( let i = 0; i < 1; i++ ) {
-     result = lettere.charAt(Math.floor(Math.random() * lettereLength));
-  }
-  return result;
-}
+// creiamo costante con tutte le lettere dell alfabeto che andremo poi a prendere random
+const lettere = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 // copia array di partenza a cui aggiungere position
 const arrayObj2 = arrayObj.map(element => (
   { //dobbiamo inserire i puntini davanti all' elemento e dentro la graffa, per andare a prendere le proprietà dentro element, senza puntini avrebbe preso l intera linea dell array e non avremmo potuto modificarne le proprietà
     ...element ,
-    position : randomLetter(1)
+    position : lettere[Math.floor(Math.random() * lettere.length)]
   })
 );
 
